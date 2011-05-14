@@ -92,6 +92,10 @@ a.dd_hover:hover {text-decoration: none !important;}
 #rarr {background: #000 url("images/rarr.png") 11px 50% no-repeat; right: 0 !important;}
 #larr:hover, #rarr:hover {opacity: 1;}
 
+/*** homepage posts ***/
+.grid .post.homeRollover {background:#DADADA;}
+
+
 /*** Content ***/
 
 #content {width: 640px; float: left;}

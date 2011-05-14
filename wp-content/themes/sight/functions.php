@@ -94,12 +94,7 @@ $meta_box = array(
             'name' => 'Show in slideshow',
             'id' => $prefix . 'slide',
             'type' => 'checkbox'
-        ),
-        array(
-            'name' => 'Lenguaje',
-            'id' => 'lang',
-            'type' => 'dropdown'
-        )				
+        )
     )
 );
 add_action('admin_menu', 'sight_add_box');
@@ -112,9 +107,7 @@ function sight_add_box() {
 }
 
 // Callback function to show fields in meta box
-function sight_show_box() {
-		
-		$i = 0;
+function sight_show_box() {	
 		
     global $meta_box, $post;
 
@@ -130,19 +123,9 @@ function sight_show_box() {
         echo '<tr>',
                 '<th style="width:50%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
                 '<td>';								
-								if($i==0){
-									echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
-								} else {
-									echo //'<input type="text" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' value="en"' : '', ' />';
-									'<select name="', $field['id'], '" id="', $field['id'], '">
-										<option value="-1" selected="selected">Seleccione: </option>
-										<option value="en">English&nbsp;</option>
-										<option value="es">Spanish&nbsp;</option>
-									</select>';
-								}
+		echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
         echo     '<td>',
             '</tr>';
-			$i++;
     }
 
     echo '</table>';
@@ -542,6 +525,7 @@ class Recentposts_thumbnail extends WP_Widget {
                 if (get_option('rpthumb_qty')) $rpthumb_qty = get_option('rpthumb_qty'); else $rpthumb_qty = 5;
                 $q_args = array(
                     'numberposts' => $rpthumb_qty,
+                    'suppress_filters' => 0,
                 );
                 $rpthumb_posts = get_posts($q_args);
                 foreach ( $rpthumb_posts as $post ) :

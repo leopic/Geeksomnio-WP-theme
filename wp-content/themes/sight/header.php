@@ -38,9 +38,7 @@
                 <div class="logo">
                     <h1><a href="<?php bloginfo('home'); ?>"><?php wp_title(); ?></a></h1>
                 </div>
-								<?php echo ICL_LANGUAGE_CODE;
-											do_action('icl_language_selector');
-									?>
+				<?php echo ICL_LANGUAGE_CODE; do_action('icl_language_selector'); ?>
 								
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Site description') ) ?>
 
