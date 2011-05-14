@@ -199,3 +199,5 @@ line-height: 100%; margin: 5px 0;
 }
 
 #icl_pt_controls p{ padding:0; margin: 0 6px 6px 0 !important;}
+
+.icl_cyan_box, #categorydiv {display:none;}

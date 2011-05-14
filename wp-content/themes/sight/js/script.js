@@ -97,13 +97,15 @@ jQuery.noConflict();
             $('#loop').find('.post')
                 .mouseenter(function(){
                     $(this)
-                        .css('background-color','#FFEA97')
+                        //.css('background-color','#FFEA97')
+						.addClass('homeRollover')				
                         .find('.thumb').hide()
                         .css('z-index','-1');
                 })
                 .mouseleave(function(){
                     $(this)
-                        .css('background-color','#f5f5f5')
+                        //.css('background-color','#f5f5f5')
+						.removeClass('homeRollover')						
                         .find('.thumb').show()
                         .css('z-index','1');
                 });
