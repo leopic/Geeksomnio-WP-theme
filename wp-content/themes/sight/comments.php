@@ -42,11 +42,13 @@
     <?php if ('open' == $post->comment_status) : ?>
 
     <div id="respond">
-        <h3>What do you think?</h3>
+        <h3><?php if (ICL_LANGUAGE_CODE == "es"){echo "?Que pens&aacute;s?"; } else { echo "What do you think?"; } ?></h3>
         <div class="comment_form">
 
         <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-            <p class="comment_message">You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
+            <p class="comment_message">
+				<?php if (ICL_LANGUAGE_CODE == "es"){echo "Debe tener una"; } else { echo "You must be"; } ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>"><?php if (ICL_LANGUAGE_CODE == "es"){echo "sesion activa"; } else { echo "logged in"; } ?></a>
+				<?php if (ICL_LANGUAGE_CODE == "es"){echo "para agregar un comentario"; } else { echo "to post a comment"; } ?></p>
         <?php else : ?>
 
             <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
