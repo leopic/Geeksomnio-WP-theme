@@ -262,7 +262,9 @@ class GetConnected extends WP_Widget {
 
     function widget($args, $instance) {
         extract( $args );
-        $title = apply_filters('widget_title', $instance['title']);
+        //$title = apply_filters('widget_title', $instance['title']);		
+		if (ICL_LANGUAGE_CODE == "es"){$title = "Seguinos la pista"; } else { $title = "Follow geeksomnio"; }
+		
         ?>
             <?php echo $before_widget; ?>
                 <?php if ( $title )
@@ -515,7 +517,9 @@ class Recentposts_thumbnail extends WP_Widget {
 
     function widget($args, $instance) {
         extract( $args );
-        $title = apply_filters('widget_title', $instance['title']);
+        $title = apply_filters('widget_title', $instance['title']);		
+		if (ICL_LANGUAGE_CODE == "es"){ $title = "Entradas recientes"; } else { $title = "Recent posts"; }
+		
         ?>
             <?php echo $before_widget; ?>
             <?php if ( $title ) echo $before_title . $title . $after_title;  else echo '<div class="widget-body clear">'; ?>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="content-title">
-    Latest entries
+	<?php if (ICL_LANGUAGE_CODE == "es"){echo "Entradas recientes"; } else { echo "Latest entries"; } ?>    
     <a href="javascript: void(0);" id="mode"<?php if ($_COOKIE['mode'] == 'grid') echo ' class="flip"'; ?>></a>
 </div>
 
