@@ -47,11 +47,14 @@ body {font: 62.5% Georgia, Geneva, "Times New Roman", times; background: #38393b
 .menu li {font-size: 11px; text-transform: uppercase;  margin: 6px 0;}
 .menu a {color: #000; text-decoration: none;}
 .menu a:hover {text-decoration: underline;}
-
-.search {width: 145px; margin-top: 28px; float: right; display:none;}
+.search {width: 145px; margin-top: 28px; float: right;}
 .search fieldset {width: 145px; height: 31px; background: #dadada;}
 .search input {width: 105px; border: none; background: none; padding: 8px; color: #fff; font: 11px Georgia, Geneva, "Times New Roman", times; text-transform: uppercase; vertical-align: middle;}
 .search button {width: 16px; height: 16px; background: url("images/search.png") 50% 50% no-repeat; cursor: pointer; border: none; vertical-align: middle;}
+.header .search {display:none;}
+.sidebar .widget-body .search { float:none; width:auto; margin:0;}
+.sidebar .widget-body .search fieldset{width:auto;}
+.sidebar .widget-body .search  input {width:240px;}
 
 /*** Navigation ***/
 
