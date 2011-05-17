@@ -31,7 +31,7 @@
         </script>
         <?php endif; ?>
 	</head>
-	<body <?php echo (get_option('bg_color')) ? 'style="background-color: '.get_option('bg_color').';"' : '' ?>>
+	<body class="<?php if(is_page()){echo "page " . ICL_LANGUAGE_CODE ;} else if(is_home()){ echo "home " . ICL_LANGUAGE_CODE; } else if(is_single()){ echo "post " . ICL_LANGUAGE_CODE; } ?>">
         <div class="wrapper">
 
             <div class="header clear">

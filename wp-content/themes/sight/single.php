@@ -20,6 +20,11 @@
                         href="#comments" class="post-comms"><?php comments_number(__('No Comments'), __('1 Comment'), __('% Comments'), '', __('Comments Closed') ); ?></a></div>
                 <div class="post-content"><?php the_content(); ?></div>
                 <div class="post-footer"><?php the_tags(__('<strong>Tags: </strong>'), ', '); ?></div>
+                <div class="author-bio">
+					<h2>Meet <a href="<?php the_author_url(); ?>" target="_blank"><?php the_author_nickname(); ?></a></h2>
+					<img src="<?php bloginfo('template_url'); ?>/images/<?php the_author_nickname(); ?>.jpg" alt="" class="alignleft"/>
+					<p><?php the_author_description(); ?></p>
+				</div>
             </div>
             <div class="post-navigation clear">
                 <?php
