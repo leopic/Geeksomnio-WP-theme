@@ -692,8 +692,12 @@ function seo_title() {
      $newtitle = single_tag_title("", false);
 
     # Search result ################################
-    if (is_search())
-     $newtitle = "Search Result " . $s;
+    if (is_search())	
+     if(ICL_LANGUAGE_CODE == "es"){
+		$newtitle = "Resultados " . $s;
+	 }else {
+		$newtitle = "Search Result " . $s;
+	 }
 
     # Taxonomy #######################################
     if (is_tax()) {

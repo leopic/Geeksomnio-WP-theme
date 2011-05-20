@@ -150,8 +150,10 @@ jQuery.noConflict();
             });
         });
 
-        /*** Misc ***/
-
+        /*** Misc ***/		
+		
+		$("#searchform input").attr("onblur","").attr("onfocus","").val("");
+		
         $('#comment, #author, #email, #url')
         .focusin(function(){
             $(this).parent().css('border-color','#888');

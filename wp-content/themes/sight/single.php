@@ -8,7 +8,7 @@
             <a href="http://facebook.com/share.php?u=<?php the_permalink() ?>&amp;t=<?php echo urlencode(the_title('','', false)) ?>" target="_blank" class="f" title="Share on Facebook"></a>
             <a href="http://twitter.com/home?status=<?php the_title(); ?> <?php echo getTinyUrl(get_permalink($post->ID)); ?>" target="_blank" class="t" title="Spread the word on Twitter"></a>
             <a href="http://digg.com/submit?phase=2&amp;url=<?php the_permalink() ?>&amp;title=<?php the_title(); ?>" target="_blank" class="di" title="Bookmark on Del.icio.us"></a>
-            <!--<a href="http://stumbleupon.com/submit?url=<?php the_permalink() ?>&amp;title=<?php echo urlencode(the_title('','', false)) ?>" target="_blank" class="su" title="Share on StumbleUpon"></a>-->
+            <a href="http://stumbleupon.com/submit?url=<?php the_permalink() ?>&amp;title=<?php echo urlencode(the_title('','', false)) ?>" target="_blank" class="su" title="Share on StumbleUpon"></a>
         </div>
 
         <div class="entry">
@@ -20,6 +20,25 @@
                         href="#comments" class="post-comms"><?php comments_number(__('No Comments'), __('1 Comment'), __('% Comments'), '', __('Comments Closed') ); ?></a></div>
                 <div class="post-content"><?php the_content(); ?></div>
                 <div class="post-footer"><?php the_tags(__('<strong>Tags: </strong>'), ', '); ?></div>
+				<div class="translations">
+					<?php
+						function icl_post_languages(){
+							$languages = icl_get_languages('skip_missing=1');
+							if(1 < count($languages)){
+								if(ICL_LANGUAGE_CODE == "es"){
+									echo "Lee esta entrada en ";
+								} else {
+									echo "Read this entry in ";
+								}						
+							foreach($languages as $l){
+							  if(!$l['active']) $langs[] = '<a href="'.$l['url'].'">'.$l['translated_name'].'</a>';
+							}
+							echo join(', ', $langs);
+						  }
+						}
+						icl_post_languages();
+					?>
+				</div>
                 <div class="author-bio">
 					<h2>Meet <a href="<?php the_author_url(); ?>" target="_blank"><?php the_author_nickname(); ?></a></h2>
 					<img src="<?php bloginfo('template_url'); ?>/images/<?php the_author_nickname(); ?>.jpg" alt="" class="alignleft"/>

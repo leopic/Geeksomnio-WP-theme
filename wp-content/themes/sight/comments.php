@@ -42,7 +42,7 @@
     <?php if ('open' == $post->comment_status) : ?>
 
     <div id="respond">
-        <h3><?php if (ICL_LANGUAGE_CODE == "es"){echo "?Que pens&aacute;s?"; } else { echo "What do you think?"; } ?></h3>
+        <h3><?php if (ICL_LANGUAGE_CODE == "es"){echo "&iquest;Que pens&aacute;s?"; } else { echo "What do you think?"; } ?></h3>
         <div class="comment_form">
 
         <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
@@ -55,7 +55,11 @@
 
                 <?php if ( $user_ID ) : ?>
 
-                    <p class="comment_message">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
+                    <p class="comment_message">
+					<?php if (ICL_LANGUAGE_CODE == "es"){echo "Sesi&oacute;n iniciada como"; } else { echo "Logged in as"; } ?>
+					
+					<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>"
+					title="<?php if (ICL_LANGUAGE_CODE == "es"){echo "Cerrar sesi&oacute;n"; } else { echo "Log out of this account"; } ?>"><?php if (ICL_LANGUAGE_CODE == "es"){echo "Cerrar sesi&oacute;n"; } else { echo "Log out of this account"; } ?> &raquo;</a></p>
 
                     <table>
                         <tr>
@@ -79,13 +83,13 @@
                         </tr>
                         <tr>
                             <td class="commform-author">
-                                <p>Name <span>required</span></p>
+                                <p><?php if (ICL_LANGUAGE_CODE == "es"){echo "Nombre"; } else { echo "Name"; } ?> <span><?php if (ICL_LANGUAGE_CODE == "es"){echo "requerido"; } else { echo "required"; } ?></span></p>
                                 <div>
                                     <input type="text" name="author" id="author" tabindex="2" />
                                 </div>
                             </td>
                             <td class="commform-email">
-                                <p>Email <span>required</span></p>
+                                <p>Email <span><?php if (ICL_LANGUAGE_CODE == "es"){echo "requerido"; } else { echo "required"; } ?></span></p>
                                 <div>
                                     <input type="text" name="email" id="email" tabindex="3" />
                                 </div>
@@ -104,7 +108,7 @@
                 <!--<p class="comment_message"><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
                 <div class="submit clear">
-                    <input name="submit" type="submit" id="submit" tabindex="5" value="Submit" />
+                    <input name="submit" type="submit" id="submit" tabindex="5" value="<?php if (ICL_LANGUAGE_CODE == "es"){echo "Agregar"; } else { echo "Submit"; } ?>" />
                     <p id="cancel-comment-reply"><?php cancel_comment_reply_link() ?></p>
                 </div>
                     
