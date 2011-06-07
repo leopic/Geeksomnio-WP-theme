@@ -123,7 +123,7 @@ a.dd_hover:hover {text-decoration: none !important;}
 .list .post h2, .list .post h2 a {color: #000; font-size: 24px; font-weight: normal; text-decoration: none;}
 .list .post h2 a:hover {text-decoration: underline;}
 .list .post .post-meta {font-size: 11px; font-style: italic; color: #aaa9a9; margin-bottom: 20px;}
-.list .post .post-meta span, .list .post .post-meta a, .entry .translations a {color: #000; text-decoration: none; font-family: Helvetica, Arial, sans-serif; font-style: normal;}
+.list .post .post-meta span, .list .post .post-meta a, .entry .translations a {color: #666; text-decoration: none; font-family: Helvetica, Arial, sans-serif; font-style: normal;}
 .entry .translations a:hover, .list .post .post-meta a:hover {text-decoration: underline;}
 .post-author {text-transform: uppercase;}
 
@@ -167,17 +167,20 @@ a.dd_hover:hover {text-decoration: none !important;}
 .entry {margin-bottom: 50px;}
 .entry .post {border-bottom: 1px solid #d9d9d9; padding-bottom: 15px;}
 .entry .post-meta {padding: 15px 0 15px 30px; border-bottom: 1px solid #d9d9d9; font-size: 11px; font-style: italic; color: #aaa9a9; position: relative;}
-.entry .post-meta h1 {color: #333; font-size: 30px; font-weight: normal; font-style: normal; margin-bottom: 5px;}
+.entry .post-meta h1 {color: #333; font-size: 30px; font-weight: normal; font-style: normal; margin-bottom: 20px;}
 .entry .post-meta span, .entry .post-meta a {color: #000; text-decoration: none; font-family: Helvetica, Arial, sans-serif; font-style: normal;}
 .entry .post-meta a:hover {text-decoration: underline;}
 .entry .post-comms {position: absolute; right: 0;}
 .entry .post-content {padding: 15px 0 0 30px;}
 .entry .post-content a {color: #000;}
 .entry .post-content a:hover {text-decoration: none;}
-.entry .post-footer, .entry .translations {padding-left: 30px; font-size: 12px; margin-bottom: 15px;}
-.entry .post-footer a {color: #000; text-decoration: none;}
+.entry .post-footer, .entry .translations {padding:10px 10px 10px 30px; font-size: 12px; margin:0 0 5px 0; color:#666; }
+.entry .post-footer a {color: #666; text-decoration: none;}
 .entry .post-footer a:hover {text-decoration: underline;}
+.entry .translations a {text-transform:lowercase; font-family:Georgia,Geneva,"Times New Roman",times; }
 .page .post-category {display: none;}
+.post .post-footer { border-bottom: 1px solid #D9D9D9; }
+.post .translations { border-bottom: 1px solid #D9D9D9; }
 
 .f, .t, .di, .su {width: 16px; height: 15px; position: absolute; bottom: 15px;}
 .f {right: 63px; background: url("images/social.png") 0 0 no-repeat;}
@@ -218,13 +221,12 @@ a.dd_hover:hover {text-decoration: none !important;}
 .line {width: 1px; height: 100%; background: #d9d9d9; position: absolute; top: 0; right: 305px;}
 
 /*** Authors ***/
-.author-bio {padding:15px 30px; overflow:auto; background:#f5f5f5; }
+.author-bio {padding:15px 30px; overflow:auto; color:#333; font-style:italic; }
 .author-bio img.alignleft {padding:3px; background:#fff; border:1px solid #eee;}
-.author-bio h2 { font-size:16px; margin:0 0 10px 0; color:#666}
-.author-bio h2 a {color:#666; }
-.author-bio h2 a:hover {color:#333; text-decoration:none; }
-.author-bio p { font-size:12px; padding:5px 0 0 0; }
-
+.author-bio h2 { font-size:16px; margin:0 0 10px 0; color:#000; font-family: Helvetica,Arial,sans-serif; }
+.author-bio h2 a {color:#000; }
+.author-bio h2 a:hover { text-decoration:none; }
+.author-bio p { font-size:13px; padding:5px 0 0 0; line-height:140%; font-family:Helvetica,Arial,sans-serif;}
 
 /*** Images ***/
 
