@@ -16,16 +16,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'db_geeksomnio');
+define('DB_NAME', 'name');
 
 /** MySQL database username */
-define('DB_USER', 'leopic');
+define('DB_USER', 'user');
 
 /** MySQL database password */
-define('DB_PASSWORD', '33zkza8x');
+define('DB_PASSWORD', 'pass');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'host');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
